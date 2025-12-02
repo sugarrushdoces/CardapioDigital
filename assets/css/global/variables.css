@@ -1,0 +1,9 @@
+:root {
+    --cor-rosa: #ff0000;
+
+    --f1: clamp(1.2rem, 2.5vw, 3rem);
+    --f2: clamp(1rem, 2vw, 2.5rem);
+    --f3: clamp(0.8rem, 1.5vw, 2rem);
+}
+
+/* para colocar no css global e importar nas outras paginas */
