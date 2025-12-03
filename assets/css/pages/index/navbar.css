@@ -1,0 +1,22 @@
+header div {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.logo {
+    padding: 20px;
+    gap: 20px;
+}
+
+h1 {
+    color: #7C3225;
+    font-family: 'Anton SC';
+}
+
+.consulte-disponibilidade {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #F7BBD5;
+    font-size: 60%;
+}
