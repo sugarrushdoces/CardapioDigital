@@ -1,3 +1,9 @@
-botton.primario {
-    background-color: brown;
+.div-button button {
+    margin: 20px 0 20px 45px;
+    padding: 10px;
+    background-color: #399717;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 30px;
 }
