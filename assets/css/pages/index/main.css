@@ -1,5 +1,5 @@
 main {
-    background-image: url(/assets/images/pages/index/Main/fundo-produtos.png);
+    background-image: url("/assets/images/pages/index/Main/fundo-produtos.png");
 }
 
 .main-produtos-inicial {
