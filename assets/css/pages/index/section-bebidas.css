@@ -1,0 +1,24 @@
+.bebidas {
+    display: flex;
+    justify-content: center;
+    color: #7C3225;
+    padding: 20px;
+}
+
+.section-bebidas div {
+    display: flex;
+}
+
+.bebidas-produtos {
+    height: 100px;
+    background: linear-gradient(to top, #f887b8 50%, #23bace 50%);
+    margin-top: 20px;
+    border-radius: 0px 50px 50px 0px;
+}
+
+.bebidas-produtos h1 {
+    margin-top: 18px;
+    color: #ffffff;
+    font-size: 15px;
+    margin-left: 20px;
+}

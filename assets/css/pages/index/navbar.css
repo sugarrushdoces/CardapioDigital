@@ -1,0 +1,20 @@
+nav {
+    background-image: url(/assets/images/pages/index/Navbar/Fundo\ navbar.png);
+}
+
+nav i {
+    font-size: 25px;
+}
+
+nav div {
+    background-image: linear-gradient(to top, rgb(245, 213, 166), rgb(0, 0, 0, 0));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav div img {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0);
+    border-radius: 100px;
+}

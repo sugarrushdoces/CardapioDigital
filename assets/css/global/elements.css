@@ -1,7 +1,5 @@
-.div-button button {
-    margin: 20px 0 20px 45px;
+button {
     padding: 10px;
-    background-color: #399717;
     color: #fff;
     font-size: 15px;
     font-weight: bold;

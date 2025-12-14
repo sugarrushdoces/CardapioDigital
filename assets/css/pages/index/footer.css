@@ -1,0 +1,13 @@
+.footer-carrinho {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-carrinho button {
+    background: transparent;
+    color: #fff;
+}

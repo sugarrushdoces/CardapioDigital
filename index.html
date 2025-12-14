@@ -6,80 +6,107 @@
     <title>Sugar Rush Doces</title>
 
     <link rel="stylesheet" href="assets/css/pages/index/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
 <header>
 
-<h1 class="header-h1">CARDÁPIO</h1>
-
-<div class="header-produtos">
-<img src="assets/images/pages/index/ninho com morango e nutella.png" alt="ninho com morango nutella" style="position: fixed, right;">
-<div class="text-produtos">
-<h1>NINHO COM MORANGO E NUTELLA</h1>
-<div class="div-button">
-<p>R$ 15,00</p>
-<button>ADICIONAR</button>
+<nav>
+<div>
+<i class="fa-solid fa-list"></i>
+<img src="/assets/images/pages/index/Navbar/logo sem fundo.png" alt="Logo navbar">
+<i class="fa-solid fa-magnifying-glass"></i>
 </div>
-</div>
-</div>
-
-<div class="header-produtos">
-<img src="assets/images/pages/index/surpresa de uva.png" alt="surpresa de uva" style="position: fixed, right;">
-<div class="text-produtos">
-<h1>SURPRESA DE UVA</h1>
-<div class="div-button">
-<p>R$ 12,00</p>
-<button>ADICIONAR</button>
-</div>
-</div>
-</div>
-
-<div class="header-produtos">
-<img src="assets/images/pages/index/bombom de ninho com morango.png" alt="bombom de ninho com morango" style="position: fixed, right;">
-<div class="text-produtos">
-<h1 style="margin-top: 8px;">BOMBOM DE NINHO <hr>COM MORANGO</h1>
-<div class="div-button">
-<p style="margin-top: 8px;">R$ 15,00</p>
-<button style="margin-top: 13px;">ADICIONAR</button>
-</div>
-</div>
-</div>
-
-<div class="header-produtos">
-<img src="assets/images/pages/index/ferrero rocher com morango e nutella.png" alt="ferrero rocher com morango e nutella" style="position: fixed, right;">
-<div class="text-produtos">
-<h1 style="margin-top: 8px;">FERREIRO ROCHER COM <hr>MORANGO E NUTELLA</h1>
-<div class="div-button">
-<p style="margin-top: 8px;">R$ 15,00</p>
-<button style="margin-top: 13px;">ADICIONAR</button>
-</div>
-</div>
-</div>
-
-<div class="header-produtos">
-<img src="assets/images/pages/index/morango do amor.png" alt="morango do amor" style="position: fixed, right;">
-<div class="text-produtos">
-<h1>MORANGO DO AMOR</h1>
-<div class="div-button">
-<p>R$ 15,00</p>
-<button>ADICIONAR</button>
-</div>
-</div>
-</div>
-
-<div class="header-produtos">
-<img src="assets/images/pages/index/bombom de ninho com uva.png" alt="bombom de ninho com uva" style="position: fixed, right;">
-<div class="text-produtos">
-<h1>BOMBO DE NINHO COM UVA</h1>
-<div class="div-button">
-<p>R$ 15,00</p>
-<button>ADICIONAR</button>
-</div>
-</div>
-</div>
+</nav>
 
 </header>
+
+<main>
+  
+<div class="main-produtos-inicial">
+<div class="img-produto">
+<img src="/assets/images/pages/index/Main/ninho-com-morango-nutella.png" alt="ninho com morango nutella">
+<div class="text-produto">
+<h1>Ninho com morango nutella</h1>
+<div>
+<p>R$ 15,00</p>
+<div>
+<button class="green-button">Adicionar</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="main-produtos-inicial">
+<div class="img-produto">
+<img src="/assets/images/pages/index/Main/ninho-com-morango-nutella.png" alt="ninho com morango nutella">
+<div class="text-produto">
+<h1>Ninho com morango nutella</h1>
+<div>
+<p>R$ 15,00</p>
+<div>
+<button class="green-button">Adicionar</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="main-produtos-inicial">
+<div class="img-produto">
+<img src="/assets/images/pages/index/Main/ninho-com-morango-nutella.png" alt="ninho com morango nutella">
+<div class="text-produto">
+<h1>Ninho com morango nutella</h1>
+<div>
+<p>R$ 15,00</p>
+<div>
+<button class="green-button">Adicionar</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="main-produtos-inicial">
+<div class="img-produto">
+<img src="/assets/images/pages/index/Main/ninho-com-morango-nutella.png" alt="ninho com morango nutella">
+<div class="text-produto">
+<h1>Ninho com morango nutella</h1>
+<div>
+<p>R$ 15,00</p>
+<div>
+<button class="green-button">Adicionar</button>
+</div>
+</div>
+</div>
+</div>
+
+</main>
+
+<div class="meu-carrinho">
+<div class="white-bottom">
+<h1>Meu carrinho</h1>
+<div class="cart-items" id="cart-items">
+<p>Total: <span id="cart-total">0.00</span></p>
+<p>Endereço de entrega:</p>
+<input type="text" id="address" placeholder="Digite seu endereço aqui" class="address"/>
+<p class="address-ward" id="address-ward">Digite seu endereço completo!</p>
+<div class="container-btn">
+<button class="close-modal-btn" id="close-modal-btn">Fechar</button>
+<button class="checkout-btn" id="checkout-btn">Finalizar pedido</button>
+</div>
+</div>
+</div>
+</div>
+
+<footer class="footer-carrinho">
+<button
+id="card-btn"
+>
+( <span id="card-count">0</span> )
+Veja seu carrinho
+<i class="fa-solid fa-cart-shopping"></i>
+</button>
+</footer>
 
 </body>
 </html>

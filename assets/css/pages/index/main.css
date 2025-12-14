@@ -1,0 +1,52 @@
+main {
+    background-image: url(/assets/images/pages/index/Main/fundo-produtos.png);
+}
+
+.main-produtos-inicial {
+    background-image: linear-gradient(to top, rgb(0, 0, 0, 0),rgb(245, 213, 166));
+}
+
+.img-produto img {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0);
+}
+
+.img-produto {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: rgba(162, 208, 248, 0.274);
+}
+
+.img-produto h1 {
+    font-size: 18px;
+    margin-top: 3px;
+}
+
+.text-produto p {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    font-weight:bold;
+    margin-top: 20px;
+}
+
+.text-produto {
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+.text-produto div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.green-button {
+    margin-top: 15px;
+    font-weight: bold;
+    background-image: linear-gradient(to top, rgb(30, 179, 55),rgba(30, 179, 55, 0.644));
+    text-shadow: 0px 0px 10px rgba(0, 0, 0);
+    border: 1px solid black;
+    border-radius: 100px;
+    padding: 8px 25px;
+    letter-spacing: 0.5px;
+}
