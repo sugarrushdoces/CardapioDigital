@@ -2,17 +2,18 @@ main {
     background-image: url("../../../images/pages/index/main-produtos/fundo-produtos.png");
 }
 
-.main-produtos-inicial {
-    background-image: linear-gradient(to top, rgb(0, 0, 0, 0),rgb(245, 213, 166));
+main section {
+    background-image: linear-gradient(to bottom, rgb(245, 213, 166), rgb(0, 0, 0, 0));
 }
 
 .img-produto img {
+    margin-left: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0);
 }
 
 .img-produto {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 25px;
     margin-bottom: 25px;
     background-color: rgba(162, 208, 248, 0.274);
@@ -20,18 +21,19 @@ main {
 
 .img-produto h1 {
     font-size: 18px;
-    margin-top: 3px;
+    margin-top: 1px;
 }
 
 .text-produto p {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
     font-size: x-large;
-    font-weight:bold;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .text-produto {
-    margin-left: 20px;
+    margin-right: 10px;
     margin-top: 8px;
 }
 
@@ -41,12 +43,14 @@ main {
 }
 
 .green-button {
-    margin-top: 15px;
+    justify-content: space-between;
+    margin-top: 5px;
     font-weight: bold;
-    background-image: linear-gradient(to top, rgb(30, 179, 55),rgba(30, 179, 55, 0.644));
+    background-image: linear-gradient(to top, rgb(21, 122, 38),rgba(30, 179, 55));
     text-shadow: 0px 0px 10px rgba(0, 0, 0);
-    border: 1px solid black;
-    border-radius: 100px;
-    padding: 8px 25px;
+    color: white;
+    border: 0.1px solid black;
+    border-radius: 10px;
+    padding: 0px 25px;
     letter-spacing: 0.5px;
 }

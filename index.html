@@ -6,7 +6,11 @@
     <title>Sugar Rush Doces</title>
 
     <link rel="stylesheet" href="assets/css/pages/index/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
 </head>
 <body>
 
@@ -22,7 +26,9 @@
 
 </header>
 
-<main>
+<main id="menu">
+
+<section>
   
 <div class="main-produtos-inicial">
 <div class="img-produto">
@@ -30,9 +36,12 @@
 <div class="text-produto">
 <h1>Ninho com morango nutella</h1>
 <div>
-<p>R$ 15,00</p>
+<p>R$ 14,99</p>
 <div>
-<button class="green-button">Adicionar</button>
+<button class="green-button"
+data-name="ninho com morango nutella"
+data-price="15.00"
+>Adicionar</button>
 </div>
 </div>
 </div>
@@ -40,52 +49,47 @@
 
 <div class="main-produtos-inicial">
 <div class="img-produto">
-<img src="assets\images\pages\index\main-produtos\ninho-com-morango-nutella.png" alt="ninho com morango nutella">
+<img src="assets\images\pages\index\main-produtos\Coxinha Crocante frango com Catupiry.png" alt="Coxinha Crocante frango com Catupiry">
 <div class="text-produto">
-<h1>Ninho com morango nutella</h1>
+<h1>Coxinha de frango Crocante</h1>
 <div>
-<p>R$ 15,00</p>
+<p>R$ 15,99</p>
 <div>
-<button class="green-button">Adicionar</button>
+<button class="green-button"
+data-name="brownie com Oreo"
+data-price="15.99"
+>Adicionar</button>
 </div>
 </div>
 </div>
 </div>
 
-<div class="main-produtos-inicial">
+<div class="main-produtos-inicial" style="margin-bottom: 60px;">
 <div class="img-produto">
-<img src="assets\images\pages\index\main-produtos\ninho-com-morango-nutella.png" alt="ninho com morango nutella">
+<img src="assets\images\pages\index\main-produtos\brownie com Oreo.png" alt="brownie com Oreo">
 <div class="text-produto">
-<h1>Ninho com morango nutella</h1>
+<h1 style="margin-right: 40px;">Fatia Brownie com Oreo</h1>
 <div>
-<p>R$ 15,00</p>
+<p style="margin-right: 45px;">R$ 17,99</p>
 <div>
-<button class="green-button">Adicionar</button>
+<button class="green-button"
+data-name="Fatia Brownie com Oreo"
+data-price="17.99"
+>Adicionar</button>
 </div>
 </div>
 </div>
 </div>
 
-<div class="main-produtos-inicial">
-<div class="img-produto">
-<img src="assets\images\pages\index\main-produtos\ninho-com-morango-nutella.png" alt="ninho com morango nutella">
-<div class="text-produto">
-<h1>Ninho com morango nutella</h1>
-<div>
-<p>R$ 15,00</p>
-<div>
-<button class="green-button">Adicionar</button>
-</div>
-</div>
-</div>
-</div>
 
+</section>
 </main>
 
-<div class="meu-carrinho">
+<div class="meu-carrinho" id="cart-modal">
 <div class="white-bottom">
 <h1>Meu carrinho</h1>
-<div class="cart-items" id="cart-items">
+<div id="cart-items-list"></div>
+<div class="cart-items">
 <p>Total: <span id="cart-total">0.00</span></p>
 <p>Endereço de entrega:</p>
 <input type="text" id="address" placeholder="Digite seu endereço aqui" class="address"/>
@@ -100,13 +104,15 @@
 
 <footer class="footer-carrinho">
 <button
-id="card-btn"
+id="cart-btn"
 >
 ( <span id="card-count">0</span> )
 Veja seu carrinho
 <i class="fa-solid fa-cart-shopping"></i>
 </button>
 </footer>
+
+<script type="module" src="/assets/js/pages/index/index.js"></script>
 
 </body>
 </html>
