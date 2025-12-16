@@ -2,29 +2,30 @@ main {
     background-image: url("../../../images/pages/index/main-produtos/fundo-produtos.png");
 }
 
-main section {
-    background-image: linear-gradient(to bottom, rgb(245, 213, 166), rgb(0, 0, 0, 0));
-}
-
-.img-produto img {
-    margin-left: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0);
+.container-produtos {
+    margin: 10px 0px 10px 0px;
+    background-color: rgba(162, 208, 248, 0.274);
+    display: flex;
+    align-items: center;
+    justify-content: space-between, center;
+    padding: 10px;
 }
 
 .img-produto {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    background-color: rgba(162, 208, 248, 0.274);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0);
 }
 
-.img-produto h1 {
+.center-text {
+    flex: 1;
+    text-align: center;
+}
+
+.center-text h1 {
     font-size: 18px;
     margin-top: 1px;
 }
 
-.text-produto p {
+.center-text p {
     font-family: "Poppins", sans-serif;
     font-weight: 800;
     font-style: normal;
@@ -32,25 +33,12 @@ main section {
     margin-top: 10px;
 }
 
-.text-produto {
-    margin-right: 10px;
-    margin-top: 8px;
-}
-
-.text-produto div {
-    display: flex;
-    justify-content: space-between;
-}
-
 .green-button {
-    justify-content: space-between;
-    margin-top: 5px;
-    font-weight: bold;
-    background-image: linear-gradient(to top, rgb(21, 122, 38),rgba(30, 179, 55));
-    text-shadow: 0px 0px 10px rgba(0, 0, 0);
+    position: relative;
+    margin-right: 5px;
+    padding: 10px;
     color: white;
-    border: 0.1px solid black;
-    border-radius: 10px;
-    padding: 0px 25px;
-    letter-spacing: 0.5px;
+    font-size: 15px;
+    background-image: linear-gradient(to top, green, rgb(9, 199, 34));
+    border-radius: 100px;
 }
