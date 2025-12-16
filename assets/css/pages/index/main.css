@@ -1,9 +1,9 @@
-main {
-    background-image: url("../../../images/pages/index/main-produtos/fundo-produtos.png");
+main {  
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(245, 213, 166)),
+    url("../../../images/pages/index/main-produtos/fundo-produtos.png");
 }
 
 .container-produtos {
-    background-image: linear-gradient(to top, rgb(0, 0, 0, 0), rgb(245, 213, 166));
     margin: 10px 0px 10px 0px;
     background-color: rgba(162, 208, 248, 0.274);
     display: flex;
