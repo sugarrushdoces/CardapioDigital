@@ -3,6 +3,7 @@ main {
 }
 
 .container-produtos {
+    background-image: linear-gradient(to top, rgb(0, 0, 0, 0), rgb(245, 213, 166));
     margin: 10px 0px 10px 0px;
     background-color: rgba(162, 208, 248, 0.274);
     display: flex;
