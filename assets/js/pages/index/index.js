@@ -98,6 +98,58 @@ cartItemContainer.addEventListener("click", function(event){
     if(event.target.classList.contains("remove-from-cart-btn")){
         const name = event.target.getAttribute("data-name")
         
-        console.log(name);
+        removeItemCart(name);
     }
 })
+
+function removeItemCart(name){
+    const index = cart.findIndex(item => item.name === name)
+
+    if(index !== -1){
+        const item = cart[index];
+        
+        if(item.quantity > 1){
+            item.quantity -= 1;
+            updateCartModal();
+            return;
+        }
+
+        cart.splice(index, 1);
+        updateCartModal();
+
+    }
+}
+addressInput.addEventListener("input", function(event){
+    let inputValue = event.target.value;
+
+    if(inputValue !== ""){
+        addressInput.style.border = "";
+        addressWarn.style.display = "none";
+}
+})
+
+checkoutBtn.addEventListener("click", function(){
+    if(cart.length === 0) return;
+    if(addressInput.value === ""){
+        addressWarn.style.display = "block";
+        addressInput.style.border = "2px solid red";
+        return;
+    }
+
+    const cartItems = cart.map((item) => {
+    return (
+        ` ${item.name} Quatidade: (${item.quantity}) Preço R$${item.price} |`
+    )
+    }).join("")
+
+    const message = encodeURIComponent(cartItems)
+    const phone = "41998924551"
+    const fullMessage = `${cartItems}\nEndereço: ${addressInput.value}`;
+
+    const encodedMessage = encodeURIComponent(fullMessage);
+
+    window.open(`https://wa.me/${phone}?text=${encodedMessage}`, "_blank");
+
+})
+
+
