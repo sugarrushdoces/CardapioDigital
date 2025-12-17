@@ -78,6 +78,7 @@ function updateCartModal(){
 
         </div>
         `
+
         total += item.price * item.quantity;
 
         cartItemContainer.appendChild(cartItemElement)
@@ -144,12 +145,9 @@ checkoutBtn.addEventListener("click", function(){
 
     const message = encodeURIComponent(cartItems)
     const phone = "41998924551"
-    const fullMessage = `${cartItems}\nEndereço: ${addressInput.value}`;
-
+    const fullMessage = `${cartItems}\nEndereço: ${addressInput.value}\nTotal: ${cartTotal.textContent}`;
     const encodedMessage = encodeURIComponent(fullMessage);
 
     window.open(`https://wa.me/${phone}?text=${encodedMessage}`, "_blank");
 
 })
-
-
