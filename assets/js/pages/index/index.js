@@ -8,15 +8,39 @@ const closeModalBtn = document.getElementById("close-modal-btn")
 const cartCounter = document.getElementById("card-count")
 const addressInput = document.getElementById("address")
 const addressWarn = document.getElementById("address-ward")
+const cartButtons = document.querySelectorAll(".cartMessage");
 
 let cart = [];
-window.cart = cart; // expõe para o console
+window.cart = cart;
 
 cartBtn.addEventListener("click", function() {
     updateCartModal();
     cartModal.style.display = "flex"
 
 })
+
+cartButtons.forEach(button => {
+    button.addEventListener("click", function(){
+        const wasAdded = checkAdded();
+
+        if(!wasAdded){
+            Toastify({
+                text: "Adicionado ao carrinho",
+                duration: 3000,
+                gravity: "top",
+                position: "center",
+                stopOnFocus: true,
+                style: {
+                    background: "#198f09ff",
+                },
+            }).showToast();
+        }
+    });
+});
+
+function checkAdded() {
+    return cart.length > 10;
+}
 
 cartModal.addEventListener("click", function(event) {
     if(event.target === cartModal){
@@ -150,4 +174,8 @@ checkoutBtn.addEventListener("click", function(){
 
     window.open(`https://wa.me/${phone}?text=${encodedMessage}`, "_blank");
 
+    cart = [];
+    updateCartModal();
+
 })
+
