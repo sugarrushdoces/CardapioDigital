@@ -33,3 +33,7 @@ nav div img {
     border: solid 2px green;
     text-align: center;
 }
+
+#arrowLeft {
+    display: none;
+}

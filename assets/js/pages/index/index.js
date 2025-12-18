@@ -14,6 +14,9 @@ const footerCarrinho = document.getElementById("footerCarrinho")
 const imgLogoDisappears = document.getElementById("imgLogoDisappears")
 const iconSearch = document.getElementById("iconSearch")
 const inputSearch = document.getElementById("inputSearch");
+const arrowLeft = document.getElementById("arrowLeft")
+const searchBox = document.getElementById("searchBox")
+const moreBar = document.getElementById("moreBar")
 
 let cart = [];
 window.cart = cart;
@@ -184,20 +187,29 @@ checkoutBtn.addEventListener("click", function(){
 
 })
 
-iconSearch.addEventListener("click", function(){
-    imgLogoDisappears.style.display = "none"
+iconSearch.addEventListener("click", function () {
+    moreBar.style.display = "none";
+    imgLogoDisappears.style.display = "none";
     inputSearch.style.display = "flex";
+    arrowLeft.style.display = "flex";
+    inputSearch.focus();
 });
 
-document.addEventListener("click", function(event){
-    const clickedOutside =
-    event.target !== inputSearch &&
-    event.target !== iconSearch;
-
-    if (clickedOutside) {
+arrowLeft.addEventListener("click", function () {
+    // Fecha a barra
+    arrowLeft.style.display = "none";
     inputSearch.style.display = "none";
-    imgLogoDisappears.style.display = "flex"
-    }
+    imgLogoDisappears.style.display = "flex";
+    moreBar.style.display = "flex";
+
+    // Limpa o texto
+    inputSearch.value = "";
+
+    // Mostra todos os produtos novamente
+    const produtos = document.querySelectorAll(".container-produtos");
+    produtos.forEach(produto => {
+        produto.style.display = "flex";
+    });
 });
 
 inputSearch.addEventListener("input", () => {
@@ -214,4 +226,3 @@ inputSearch.addEventListener("input", () => {
         }
     });
 });
-
