@@ -25,10 +25,13 @@
 <header>
 
 <nav>
-<div>
+<div class="div-navbar">
 <i class="fa-solid fa-list"></i>
-<img src="assets/images/pages/index/navbar-inicio/logo.png" alt="Logo navbar">
-<i class="fa-solid fa-magnifying-glass"></i>
+<div class="search-box">
+<img src="assets/images/pages/index/navbar-inicio/logo.png" alt="Logo navbar" id="imgLogoDisappears">
+<input type="text" placeholder="Buscar produtos ... " class="inputsearch" id="inputSearch">
+</div>
+<i class="fa-solid fa-magnifying-glass" id="iconSearch"></i>
 </div>
 </nav>
 
@@ -67,8 +70,7 @@ data-price="14.99"
 <p>R$ 15,99</p>
 </div>
 <button class="green-button cartMessage"
-data-name="
-Coxinha Crocante frango com Catupiry"
+data-name="Coxinha Crocante frango com Catupiry"
 data-price="15.99"
 >Adicionar</button>
 </div>
@@ -92,7 +94,7 @@ data-price="15.99"
 </div>
 </div>
 
-<footer class="footer-carrinho">
+<footer class="footer-carrinho" id="footerCarrinho">
 <button
 id="cart-btn"
 >
@@ -103,7 +105,7 @@ Veja seu carrinho
 </footer>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<script src="assets\js\pages\index\index.js"></script>
+<script src="assets\js\pages\index\index.js" defer></script>
 
 </body>
 </html>

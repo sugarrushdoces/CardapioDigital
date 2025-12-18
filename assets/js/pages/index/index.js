@@ -9,18 +9,18 @@ const cartCounter = document.getElementById("card-count")
 const addressInput = document.getElementById("address")
 const addressWarn = document.getElementById("address-ward")
 const cartButtons = document.querySelectorAll(".cartMessage");
+const cartFooter = document.getElementById("cartFooter")
+const footerCarrinho = document.getElementById("footerCarrinho")
+const imgLogoDisappears = document.getElementById("imgLogoDisappears")
+const iconSearch = document.getElementById("iconSearch")
+const inputSearch = document.getElementById("inputSearch");
 
 let cart = [];
 window.cart = cart;
 
-cartBtn.addEventListener("click", function() {
-    updateCartModal();
-    cartModal.style.display = "flex"
-
-})
-
 cartButtons.forEach(button => {
     button.addEventListener("click", function(){
+    footerCarrinho.style.display = "block"
         const wasAdded = checkAdded();
 
         if(!wasAdded){
@@ -37,6 +37,11 @@ cartButtons.forEach(button => {
         }
     });
 });
+
+cartBtn.addEventListener("click", function() {
+    updateCartModal();
+    cartModal.style.display = "flex"
+})
 
 function checkAdded() {
     return cart.length > 10;
@@ -178,4 +183,35 @@ checkoutBtn.addEventListener("click", function(){
     updateCartModal();
 
 })
+
+iconSearch.addEventListener("click", function(){
+    imgLogoDisappears.style.display = "none"
+    inputSearch.style.display = "flex";
+});
+
+document.addEventListener("click", function(event){
+    const clickedOutside =
+    event.target !== inputSearch &&
+    event.target !== iconSearch;
+
+    if (clickedOutside) {
+    inputSearch.style.display = "none";
+    imgLogoDisappears.style.display = "flex"
+    }
+});
+
+inputSearch.addEventListener("input", () => {
+    const filter = inputSearch.value.toLowerCase();
+    const produtos = document.querySelectorAll(".container-produtos");
+
+    produtos.forEach(produto => {
+        const nome = produto.querySelector("h1").textContent.toLowerCase();
+
+        if (nome.includes(filter)) {
+            produto.style.display = "flex";
+        } else {
+            produto.style.display = "none";
+        }
+    });
+});
 
