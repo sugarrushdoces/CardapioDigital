@@ -29,10 +29,13 @@ cartButtons.forEach(button => {
         if(!wasAdded){
             Toastify({
                 text: "Adicionado ao carrinho",
-                duration: 3000,
+                duration: 2000,
                 gravity: "top",
                 position: "center",
                 stopOnFocus: true,
+                    offset: {
+                 y: 40
+                },
                 style: {
                     background: "#198f09ff",
                 },
