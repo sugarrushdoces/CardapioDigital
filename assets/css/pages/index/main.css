@@ -10,7 +10,7 @@
 
 .container-produtos-1 {
     gap: 12px 20px;
-    padding: 20px 20px;
+    padding: 20px;
     display: grid;
     grid-template-rows: auto auto auto;
     align-items: center;
