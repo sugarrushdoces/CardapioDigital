@@ -11,8 +11,21 @@ const addressWarn = document.getElementById("address-ward")
 const cartButtons = document.querySelectorAll(".cartMessage");
 const footerCarrinho = document.getElementById("footerCarrinho")
 
+// Opções de entrega/retirada
+const btnDelivery = document.getElementById("btn-delivery")
+const btnPickup = document.getElementById("btn-pickup")
+const deliveryInfo = document.getElementById("delivery-info")
+const pickupInfo = document.getElementById("pickup-info")
+const storeAddress = document.getElementById("store-address")
+const deliveryChoiceText = document.getElementById("delivery-choice-text")
+
 let cart = [];
+let selectedOption = null;
 window.cart = cart;
+
+// Configurar endereço da loja
+const STORE_ADDRESS = "Rua Marrocos 109, referência portão de madeira"
+storeAddress.textContent = STORE_ADDRESS;
 
 cartButtons.forEach(button => {
     button.addEventListener("click", function(){
@@ -41,6 +54,41 @@ cartBtn.addEventListener("click", function() {
     updateCartModal();
     cartModal.style.display = "flex"
 })
+
+// Event listeners para opções de entrega/retirada
+btnDelivery.addEventListener("click", function() {
+    if(selectedOption === "delivery" && deliveryInfo.style.display === "block") {
+        // Se já estava selecionado, fecha
+        deliveryInfo.style.display = "none";
+        btnDelivery.classList.remove("active");
+        selectedOption = null;
+    } else {
+        // Abre a opção de entrega
+        selectedOption = "delivery";
+        btnDelivery.classList.add("active");
+        btnPickup.classList.remove("active");
+        deliveryInfo.style.display = "block";
+        pickupInfo.style.display = "none";
+        deliveryChoiceText.style.color = "";
+    }
+});
+
+btnPickup.addEventListener("click", function() {
+    if(selectedOption === "pickup" && pickupInfo.style.display === "block") {
+        // Se já estava selecionado, fecha
+        pickupInfo.style.display = "none";
+        btnPickup.classList.remove("active");
+        selectedOption = null;
+    } else {
+        // Abre a opção de retirada
+        selectedOption = "pickup";
+        btnPickup.classList.add("active");
+        btnDelivery.classList.remove("active");
+        deliveryInfo.style.display = "none";
+        pickupInfo.style.display = "block";
+        deliveryChoiceText.style.color = "";
+    }
+});
 
 function checkAdded() {
     return cart.length > 10;
@@ -96,13 +144,14 @@ function updateCartModal(){
         <div class="cart-items">
         <div>
         <p>${item.name}</p>
-        <p>Qtd: ${item.quantity}</p>
         <p>R$ ${item.price.toFixed(2)}</p>
         </div>
 
-        <button class="remove-from-cart-btn" data-name="${item.name}">
-        remover
-        </button>
+        <div class="quantity-counter">
+        <button class="btn-decrease" data-name="${item.name}">-</button>
+        <span class="quantity-display">${item.quantity}</span>
+        <button class="btn-increase" data-name="${item.name}">+</button>
+        </div>
 
         </div>
         `
@@ -124,14 +173,18 @@ cartCounter.innerHTML = cart.length;
 }
 
 cartItemContainer.addEventListener("click", function(event){
-    if(event.target.classList.contains("remove-from-cart-btn")){
+    if(event.target.classList.contains("btn-decrease")){
         const name = event.target.getAttribute("data-name")
-        
-        removeItemCart(name);
+        decreaseQuantity(name);
+    }
+    
+    if(event.target.classList.contains("btn-increase")){
+        const name = event.target.getAttribute("data-name")
+        increaseQuantity(name);
     }
 })
 
-function removeItemCart(name){
+function decreaseQuantity(name){
     const index = cart.findIndex(item => item.name === name)
 
     if(index !== -1){
@@ -148,6 +201,15 @@ function removeItemCart(name){
 
     }
 }
+
+function increaseQuantity(name){
+    const index = cart.findIndex(item => item.name === name)
+
+    if(index !== -1){
+        cart[index].quantity += 1;
+        updateCartModal();
+    }
+}
 addressInput.addEventListener("input", function(event){
     let inputValue = event.target.value;
 
@@ -159,7 +221,15 @@ addressInput.addEventListener("input", function(event){
 
 checkoutBtn.addEventListener("click", function(){
     if(cart.length === 0) return;
-    if(addressInput.value === ""){
+    
+    // Validação de opção selecionada
+    if(!selectedOption) {
+        deliveryChoiceText.style.color = "red";
+        return;
+    }
+    
+    // Validação apenas para entrega
+    if(selectedOption === "delivery" && addressInput.value === ""){
         addressWarn.style.display = "block";
         addressInput.style.border = "2px solid red";
         return;
@@ -171,9 +241,15 @@ checkoutBtn.addEventListener("click", function(){
     )
     }).join("")
 
-    const message = encodeURIComponent(cartItems)
     const phone = "41998924551"
-    const fullMessage = `${cartItems}\nEndereço: ${addressInput.value}\nTotal: ${cartTotal.textContent}`;
+    let fullMessage;
+    
+    if(selectedOption === "delivery"){
+        fullMessage = `${cartItems}\nEndereço de Entrega: ${addressInput.value}\nTotal: ${cartTotal.textContent}`;
+    } else {
+        fullMessage = `${cartItems}\n**RETIRADA**\nEndereço: ${STORE_ADDRESS}\nTotal: ${cartTotal.textContent}`;
+    }
+    
     const encodedMessage = encodeURIComponent(fullMessage);
 
     window.open(`https://wa.me/${phone}?text=${encodedMessage}`, "_blank");
