@@ -144,7 +144,7 @@ function updateCartModal(){
         cartItemElement.innerHTML = `
         <div class="cart-items containermodal">
         <div>
-        <p>${item.name}</p>
+        <p class="descriptionmodal">${item.name}</p>
         </div>
         <div class="quantity-counter pricequantity">
         <p>R$ ${item.price.toFixed(2)}</p>

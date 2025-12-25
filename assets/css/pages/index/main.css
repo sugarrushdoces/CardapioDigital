@@ -6,6 +6,8 @@
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
+    color: rgb(231, 88, 88);
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
 
 .container-produtos-1 {
