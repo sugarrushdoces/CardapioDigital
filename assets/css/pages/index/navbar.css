@@ -48,9 +48,16 @@ nav div img {
     gap: 20px;
 }
 
+.searchiconinput {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(245, 213, 166);
+    gap: 10px;
+}
+
 .inputsearch {
     display: none;
-    padding: 5px 30px 5px 30px;
+    padding: 5px 80px;
     border-radius: 100px;
     border: solid 2px green;
     text-align: center;
@@ -62,8 +69,4 @@ nav div img {
 
 .fa-solid {
     font-size: 35px;
-}
-
-.listglass {
-    padding: 20px;
 }

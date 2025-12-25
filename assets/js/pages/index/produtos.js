@@ -9,10 +9,10 @@ imagens.forEach(img => {
     const text = container.querySelector('.disappear-text');
 
     // alterna visibilidade
-    descricao.style.display = 
+    descricao.style.display =
       descricao.style.display === 'none' ? 'block' : 'none';
-    text.style.display = 
-     text.style.display === 'none' ? 'block' : 'none';
+    text.style.display =
+      text.style.display === 'none' ? 'block' : 'none';
   });
 });
 
@@ -23,14 +23,21 @@ const categoryTitles = document.querySelectorAll('.container-produtoh1');
 function toggleCategoryTitles() {
   if (!searchInput || !categoryTitles) return;
   const shouldHide = searchInput.value.trim().length > 0;
+
   categoryTitles.forEach(el => {
-    el.style.display = shouldHide ? 'none' : '';
+    el.style.display = shouldHide ? 'none' : 'flex'; // força voltar como 'flex'
   });
 }
 
+// Eventos
 if (searchInput) {
   searchInput.addEventListener('input', toggleCategoryTitles);
+
+  // Quando o usuário limpa a pesquisa (ex: tecla ESC ou botão limpar)
+  searchInput.addEventListener('change', toggleCategoryTitles);
+
   document.addEventListener('DOMContentLoaded', toggleCategoryTitles);
+
   // Chamada imediata para cobrir casos em que o script roda após o DOM
   toggleCategoryTitles();
 }
