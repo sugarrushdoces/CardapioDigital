@@ -401,28 +401,28 @@
 
 <div class="meu-carrinho" id="cart-modal">
 <div class="white-bottom">
-<button class="close-modal-btn" id="close-modal-btn">x</button>
 <h1>Meu carrinho</h1>
+<button class="close-modal-btn" id="close-modal-btn">x</button>
 <div id="cart-items-list"></div>
 <div class="cart-items">
-<p>Total: <span id="cart-total">0.00</span></p>
+<p class="cartitemsp">Total: <span id="cart-total">0.00</span></p>
 
 <div class="delivery-options">
-<p id="delivery-choice-text">Escolha uma opção:</p>
+<p class="delivery-choice-text" id="delivery-choice-text">Escolha uma opção:</p>
 <div class="deliverybtnpickup">
 <button class="option-btn active" id="btn-delivery" data-type="delivery">Entrega</button>
 <button class="option-btn" id="btn-pickup" data-type="pickup">Retirada</button>
 </div>
 </div>
 
-<div id="delivery-info" class="delivery-info" style="display: none;">
+<div id="delivery-info" class="delivery-inf deliveryinfo">
 <p>Endereço de entrega:</p>
-<input type="text" id="address" placeholder="Digite seu endereço aqui" class="address"/>
+<input type="text" id="address" placeholder="Digite seu endereço aqui..." class="address"/>
 <p class="address-ward" id="address-ward">Digite seu endereço completo!</p>
 </div>
 
-<div id="pickup-info" class="pickup-info" style="display: none;">
-<p>**RETIRADA**</p>
+<div id="pickup-info" class="pickup-info pickupinfo">
+<p>Rua Marrocos 109</p>
 <p id="store-address"></p>
 </div>
 

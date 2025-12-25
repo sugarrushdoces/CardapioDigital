@@ -24,14 +24,20 @@
 }
 
 .meu-carrinho div h1 {
-    font-size: 100%;
+    margin-bottom: 10px;
+    font-size: 25px;
     text-align: center;
+}
+
+#delivery-choice-text {
+    display: flex;
+    justify-content: center;
 }
 
 .deliverybtnpickup {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .deliverybtnpickup button {
@@ -46,11 +52,28 @@
     margin-bottom: 10px;
 }
 
+.pickupinfo {
+    background-color: rgba(255, 255, 0, 0.671);
+    display: none;
+    font-size: 20px;
+    justify-items: center;
+}
+
+.deliveryinfo {
+    display: none;
+    justify-items: center;
+}
+
 .cart-items {
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
+    justify-content: center;
     gap: 10px;
+}
+
+.cart-items .cartitemsp {
+  text-align: center;
+  font-weight: bold; /* opcional, para destacar */
 }
 
 #cart-items-list {
@@ -58,14 +81,15 @@
     overflow-y: auto;
     padding-right: 5px;
 }
+
 .container-btn {
     display: flex;
     justify-content: center;
-    margin: 20px 0px 20px 0px;
 }
 
 .close-modal-btn {
     display: flex;
+    position: absolute;
     background-color: rgba(255, 0, 0, 0);
     font-size: 30px;
 }
@@ -73,15 +97,18 @@
 .checkout-btn {
     background-color: green;
     color: white;
-    padding: 10px 70px;
+    padding: 10px 78px;
     border-radius: 100px;
     font-size: 20px;
 }
 
 .address {
-    border: 2px solid rgb(130, 130, 130);
-    padding: 5px 10px;
-    font-size: 22px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(59, 108, 201);
+    padding: 5px 50px;
+    font-size: 15px;
+    margin-bottom: 10px;
 }
 
 .address-ward {
@@ -132,4 +159,13 @@
 .hidden {
     display: none !important;
     visibility: hidden !important;
+}
+
+/* Estilos para indicar erro nas opções e campos */
+.error-text {
+    color: red !important;
+}
+
+.error-border {
+    border: 2px solid red !important;
 }

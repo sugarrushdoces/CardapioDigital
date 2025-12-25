@@ -65,8 +65,9 @@ function updateOptionStyles(){
 }
 
 // Configurar endereço da loja
-const STORE_ADDRESS = "Rua Marrocos 109, referência portão de madeira"
+const STORE_ADDRESS = "*RETIRADA NA LOJA*"
 storeAddress.textContent = STORE_ADDRESS;
+storeAddress.style.display = "none";
 
 cartButtons.forEach(button => {
     button.addEventListener("click", function(){
@@ -92,6 +93,14 @@ cartButtons.forEach(button => {
 });
 
 cartBtn.addEventListener("click", function() {
+    // Ao abrir o modal, limpar seleção anterior para obrigar escolha
+    selectedOption = null;
+    if(btnDelivery) btnDelivery.classList.remove('active', 'hidden', 'error-border');
+    if(btnPickup) btnPickup.classList.remove('active', 'hidden', 'error-border');
+    if(deliveryInfo) deliveryInfo.style.display = 'none';
+    if(pickupInfo) pickupInfo.style.display = 'none';
+    if(deliveryChoiceText) deliveryChoiceText.classList.remove('error-text');
+    updateOptionStyles();
     updateCartModal();
     cartModal.style.display = "flex"
 })
@@ -114,9 +123,9 @@ btnDelivery.addEventListener("click", function() {
         btnPickup.classList.remove("active");
         deliveryInfo.style.display = "block";
         pickupInfo.style.display = "none";
-        if(deliveryOptions) deliveryOptions.style.border = "";
-        // Esconder o botão de retirada
-        if(btnPickup) btnPickup.classList.add("hidden");
+        if(deliveryChoiceText) deliveryChoiceText.classList.remove('error-text');
+        if(btnDelivery) btnDelivery.classList.remove('error-border');
+        if(btnPickup) btnPickup.classList.remove('error-border');
         // Atualizar estilos
         updateOptionStyles();
     }
@@ -139,9 +148,9 @@ btnPickup.addEventListener("click", function() {
         btnDelivery.classList.remove("active");
         deliveryInfo.style.display = "none";
         pickupInfo.style.display = "block";
-        if(deliveryOptions) deliveryOptions.style.border = "";
-        // Esconder o botão de entrega
-        if(btnDelivery) btnDelivery.classList.add("hidden");
+        if(deliveryChoiceText) deliveryChoiceText.classList.remove('error-text');
+        if(btnDelivery) btnDelivery.classList.remove('error-border');
+        if(btnPickup) btnPickup.classList.remove('error-border');
         // Atualizar estilos
         updateOptionStyles();
     }
@@ -278,17 +287,26 @@ addressInput.addEventListener("input", function(event){
 
 checkoutBtn.addEventListener("click", function(){
     if(cart.length === 0) return;
-    
+    // limpa avisos anteriores
+    if(deliveryChoiceText) deliveryChoiceText.classList.remove('error-text');
+    if(btnDelivery) btnDelivery.classList.remove('error-border');
+    if(btnPickup) btnPickup.classList.remove('error-border');
+    if(addressWarn) addressWarn.style.display = "none";
+    if(addressInput) addressInput.classList.remove('error-border');
+
     // Validação de opção selecionada
     if(!selectedOption) {
-        if(deliveryOptions) deliveryOptions.style.border = "1px solid red";
+        if(deliveryChoiceText) deliveryChoiceText.classList.add('error-text');
+        if(btnDelivery) btnDelivery.classList.add('error-border');
+        if(btnPickup) btnPickup.classList.add('error-border');
         return;
     }
-    
+
     // Validação apenas para entrega
-    if(selectedOption === "delivery" && addressInput.value === ""){
-        addressWarn.style.display = "block";
-        addressInput.style.border = "2px solid red";
+    if(selectedOption === "delivery" && addressInput.value.trim() === ""){
+        if(addressWarn) addressWarn.style.display = "block";
+        if(addressInput) addressInput.classList.add('error-border');
+        if(addressInput) addressInput.focus();
         return;
     }
 
