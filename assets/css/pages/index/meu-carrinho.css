@@ -25,6 +25,20 @@
     text-align: center;
 }
 
+.deliverybtnpickup {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.deliverybtnpickup button {
+    background-color: yellow;
+    border: 1px solid black;
+    border-radius: 100px;
+    font-size: 22px;
+    padding: 8px 20px;
+}
+
 .cart-items {
     display: flex;
     flex-direction: column;
@@ -39,22 +53,22 @@
 }
 
 .close-modal-btn {
-    background-color: red;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
+    background-color: rgba(255, 0, 0, 0);
+    font-size: 22px;
 }
 
 .checkout-btn {
     background-color: green;
     color: white;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-size: 22px;
 }
 
 .address {
     border: 2px solid rgb(130, 130, 130);
     padding: 5px 10px;
+    font-size: 22px;
 }
 
 .address-ward {
@@ -64,4 +78,35 @@
 
 .buttonmodal {
     background-color: red;
+}
+
+.containermodal {
+    border: 2px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.pricequantity {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.btnshopping {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-decrease {
+    background-color: rgba(240, 248, 255, 0);
+    padding: 0px 11px;
+    border: 1px solid gray;
+    font-size: 20px;
+}
+
+.btn-increase {
+    background-color: rgba(240, 248, 255, 0);
+    padding: 0px 10px;
+    border: 1px solid black;
+    font-size: 20px;
 }

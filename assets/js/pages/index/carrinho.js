@@ -18,6 +18,7 @@ const deliveryInfo = document.getElementById("delivery-info")
 const pickupInfo = document.getElementById("pickup-info")
 const storeAddress = document.getElementById("store-address")
 const deliveryChoiceText = document.getElementById("delivery-choice-text")
+const deliveryOptions = document.querySelector('.delivery-options')
 
 let cart = [];
 let selectedOption = null;
@@ -69,7 +70,7 @@ btnDelivery.addEventListener("click", function() {
         btnPickup.classList.remove("active");
         deliveryInfo.style.display = "block";
         pickupInfo.style.display = "none";
-        deliveryChoiceText.style.color = "";
+        if(deliveryOptions) deliveryOptions.style.border = "";
     }
 });
 
@@ -86,7 +87,7 @@ btnPickup.addEventListener("click", function() {
         btnDelivery.classList.remove("active");
         deliveryInfo.style.display = "none";
         pickupInfo.style.display = "block";
-        deliveryChoiceText.style.color = "";
+        if(deliveryOptions) deliveryOptions.style.border = "";
     }
 });
 
@@ -141,18 +142,18 @@ function updateCartModal(){
     cart.forEach(item => {
         const cartItemElement = document.createElement("div");
         cartItemElement.innerHTML = `
-        <div class="cart-items">
+        <div class="cart-items containermodal">
         <div>
         <p>${item.name}</p>
-        <p>R$ ${item.price.toFixed(2)}</p>
         </div>
-
-        <div class="quantity-counter">
+        <div class="quantity-counter pricequantity">
+        <p>R$ ${item.price.toFixed(2)}</p>
+        <div class="btnshopping">
         <button class="btn-decrease" data-name="${item.name}">-</button>
         <span class="quantity-display">${item.quantity}</span>
         <button class="btn-increase" data-name="${item.name}">+</button>
         </div>
-
+        </div>
         </div>
         `
 
@@ -224,7 +225,7 @@ checkoutBtn.addEventListener("click", function(){
     
     // Validação de opção selecionada
     if(!selectedOption) {
-        deliveryChoiceText.style.color = "red";
+        if(deliveryOptions) deliveryOptions.style.border = "1px solid red";
         return;
     }
     
