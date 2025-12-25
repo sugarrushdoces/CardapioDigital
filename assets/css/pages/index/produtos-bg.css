@@ -1,23 +1,93 @@
-.produto-bg {
+.endspacing {
+    margin-bottom: 70px;
+}
+
+.produtositems {
     background-color: rgb(245, 213, 166);
-    margin-top: 10px;
-    padding: 10px;
+    margin-top: 10px; padding: 10px;
 }
 
-.produto-bg h1 {
-    margin-top: 10px;
-}
-
-.produto-item {
-    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166));
+.background-setting {
     background-size: 470px;
-    background-size: cover;
 }
 
-.produto-item.grande {
-    background-size: 490px;
+.copobrowniedoisamores {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/copodafelicidade/browniedoisamores.png");
 }
 
-.produto-item.mb-bottom {
-    margin-bottom: 80px;
+.copomorango {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/copodafelicidade/morango.png");
 }
+
+.copouvamorango {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/copodafelicidade/uvamorango.png");
+}
+
+.copouva {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/copodafelicidade/uva.png");
+}
+
+.copouvaverdecomsuspiro {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/copodafelicidade/uvaverdecomsuspiro.png");
+}
+
+.copomorangocomsuspiro {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/copodafelicidade/morangocomsuspiro.png");
+}
+
+.copooreo {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/copodafelicidade/oreo.png");
+}
+
+.brownienutella {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/brownies/brownienutella.png");
+}
+
+.brownieoreo {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/brownies/brownieoreo.png");
+}
+
+.brownieoreo {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/brownies/brownieuva.png");
+}
+
+.browniemorango {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/brownies/browniemorango.png");
+}
+
+.moranloversbrigadeirodeninhocomnutella {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/moranlovers/brigadeirodeninhocomnutella.png");
+}
+
+.moranloversferreirorocher {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/moranlovers/ferreirorocher.png");
+}
+
+.moranloversbrigadeiro50cacaucommorango {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/moranlovers/brigadeiro50cacaucommorango.png");
+}
+
+.moranloversbrigadeirodeninhocommorango {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/moranlovers/brigadeirodeninhocommorango.png");
+}
+
+.surpredeuvasurpresadeuva {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/surpredeuva/surpresadeuva.png");
+}
+
