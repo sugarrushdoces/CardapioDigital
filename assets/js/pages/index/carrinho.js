@@ -24,6 +24,46 @@ let cart = [];
 let selectedOption = null;
 window.cart = cart;
 
+// Inicializar selectedOption se html já traz um botão ativo
+if(btnDelivery && btnDelivery.classList.contains('active')) {
+    selectedOption = 'delivery';
+} else if(btnPickup && btnPickup.classList.contains('active')) {
+    selectedOption = 'pickup';
+}
+
+// Atualiza estilos (fundo e cor da fonte) dos botões de opção
+function updateOptionStyles(){
+    // Reset ambos
+    if(btnDelivery){
+        btnDelivery.style.backgroundColor = '';
+        btnDelivery.style.color = '';
+        btnDelivery.style.borderColor = '';
+        btnDelivery.style.display = '';
+    }
+    if(btnPickup){
+        btnPickup.style.backgroundColor = '';
+        btnPickup.style.color = '';
+        btnPickup.style.borderColor = '';
+        btnPickup.style.display = '';
+    }
+
+    // Aplicar ao selecionado
+    if(selectedOption === 'delivery' && btnDelivery){
+        btnDelivery.style.backgroundColor = 'blue';
+        btnDelivery.style.color = 'white';
+    }
+
+    if(selectedOption === 'pickup' && btnPickup){
+        btnPickup.style.backgroundColor = 'blue';
+        btnPickup.style.color = 'white';
+    }
+
+    // Se nenhum selecionado, garantir que container volte ao normal
+    if(!selectedOption && deliveryOptions){
+        deliveryOptions.style.backgroundColor = '';
+    }
+}
+
 // Configurar endereço da loja
 const STORE_ADDRESS = "Rua Marrocos 109, referência portão de madeira"
 storeAddress.textContent = STORE_ADDRESS;
@@ -63,6 +103,10 @@ btnDelivery.addEventListener("click", function() {
         deliveryInfo.style.display = "none";
         btnDelivery.classList.remove("active");
         selectedOption = null;
+        // Mostrar o botão de retirada novamente
+        if(btnPickup) btnPickup.classList.remove("hidden");
+        // Atualizar estilos
+        updateOptionStyles();
     } else {
         // Abre a opção de entrega
         selectedOption = "delivery";
@@ -71,6 +115,10 @@ btnDelivery.addEventListener("click", function() {
         deliveryInfo.style.display = "block";
         pickupInfo.style.display = "none";
         if(deliveryOptions) deliveryOptions.style.border = "";
+        // Esconder o botão de retirada
+        if(btnPickup) btnPickup.classList.add("hidden");
+        // Atualizar estilos
+        updateOptionStyles();
     }
 });
 
@@ -80,6 +128,10 @@ btnPickup.addEventListener("click", function() {
         pickupInfo.style.display = "none";
         btnPickup.classList.remove("active");
         selectedOption = null;
+        // Mostrar o botão de entrega novamente
+        if(btnDelivery) btnDelivery.classList.remove("hidden");
+        // Atualizar estilos
+        updateOptionStyles();
     } else {
         // Abre a opção de retirada
         selectedOption = "pickup";
@@ -88,11 +140,15 @@ btnPickup.addEventListener("click", function() {
         deliveryInfo.style.display = "none";
         pickupInfo.style.display = "block";
         if(deliveryOptions) deliveryOptions.style.border = "";
+        // Esconder o botão de entrega
+        if(btnDelivery) btnDelivery.classList.add("hidden");
+        // Atualizar estilos
+        updateOptionStyles();
     }
 });
 
 function checkAdded() {
-    return cart.length > 10;
+    return cart.length > 20;
 }
 
 cartModal.addEventListener("click", function(event) {
