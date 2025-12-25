@@ -1,0 +1,23 @@
+.produto-bg {
+    background-color: rgb(245, 213, 166);
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.produto-bg h1 {
+    margin-top: 10px;
+}
+
+.produto-item {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166));
+    background-size: 470px;
+    background-size: cover;
+}
+
+.produto-item.grande {
+    background-size: 490px;
+}
+
+.produto-item.mb-bottom {
+    margin-bottom: 80px;
+}
