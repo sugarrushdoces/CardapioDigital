@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     justify-self: center;
+    justify-items: center;
+    justify-content: center;
 }
 
 .imgcardapio1 {
@@ -13,6 +15,8 @@
     position: fixed;
     display: flex;
     justify-self: center;
+    justify-items: center;
+    justify-content: center;
     text-align: center;
     font-family: "Poppins", sans-serif;
     font-size: 15px;
