@@ -76,3 +76,29 @@ nav div img {
 .fa-solid {
     font-size: 35px;
 }
+
+.whatsapplink {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.whatsappimage {
+    width: 50px;
+    animation: pulse 1.5s infinite; /* nome da animação, duração e repetição */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);       /* tamanho normal */
+    opacity: 1;                /* totalmente visível */
+  }
+  50% {
+    transform: scale(1.1);     /* aumenta um pouco */
+    opacity: 0.7;              /* fica mais transparente */
+  }
+  100% {
+    transform: scale(1);       /* volta ao normal */
+    opacity: 1;
+  }
+}
