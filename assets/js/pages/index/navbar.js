@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         inputSearch.style.display = "grid";
         inputSearch.focus();
         if (arrowLeft) arrowLeft.style.display = "grid";
-        toggleCategoryTitles(true); // esconde títulos ao abrir busca
+        toggleCategoryTitles(false); // esconde títulos ao abrir busca
     }
 
     // Fecha campo de busca e restaura

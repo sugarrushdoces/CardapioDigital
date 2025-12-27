@@ -7,6 +7,11 @@ nav i {
     font-size: 25px;
 }
 
+.menureturn {
+    text-decoration: none;
+    color: #000;
+}
+
 nav .div-navbar {
     background-image: linear-gradient(to top, rgb(245, 213, 166), rgb(0, 0, 0, 0));
     display: flex;
