@@ -56,7 +56,7 @@
     url("../../../images/pages/index/brownies/brownieoreo.png");
 }
 
-.brownieoreo {
+.brownieuva {
     background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
     url("../../../images/pages/index/brownies/brownieuva.png");
 }
@@ -84,6 +84,11 @@
 .moranloversbrigadeirodeninhocommorango {
     background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
     url("../../../images/pages/index/moranlovers/brigadeirodeninhocommorango.png");
+}
+
+.moranloversbombomninhocommorango {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/moranlovers/bombomdeninhocommorango.png");
 }
 
 .surpredeuvasurpresadeuva {
