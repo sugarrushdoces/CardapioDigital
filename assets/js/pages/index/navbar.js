@@ -68,4 +68,13 @@ document.addEventListener('DOMContentLoaded', () => {
             searchOpen = false;
         });
     }
+        // 🔑 Captura tecla Enter/Ir no teclado
+    if (inputSearch) {
+        inputSearch.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                event.preventDefault(); // evita submit de formulário
+                applySearchAndCloseKeyboard(); // aplica filtro e fecha teclado
+            }
+        });
+    }
 });
