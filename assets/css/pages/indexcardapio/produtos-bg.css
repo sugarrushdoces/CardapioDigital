@@ -11,6 +11,11 @@
     background-size: 470px;
 }
 
+.salgadoscoxinhacrocante {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/salgados/coxinhacrocante.png");
+}
+
 .copobrowniedoisamores {
     background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
     url("../../../images/pages/index/copodafelicidade/browniedoisamores.png");
