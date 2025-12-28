@@ -14,51 +14,58 @@ document.addEventListener('DOMContentLoaded', () => {
         title.dataset.originalDisplay = getComputedStyle(title).display;
     });
 
-    // Função para mostrar/ocultar títulos
     function toggleCategoryTitles(hide) {
         categoryTitles.forEach(el => {
             el.style.display = hide ? "none" : el.dataset.originalDisplay;
         });
     }
 
-    // Abre campo de busca
+    let searchOpen = false; // 🔑 controla estado da busca
+
     function openSearch() {
         inputSearch.style.display = "grid";
-        inputSearch.focus();
         if (arrowLeft) arrowLeft.style.display = "grid";
-        toggleCategoryTitles(false); // esconde títulos ao abrir busca
+        toggleCategoryTitles(true); // esconde títulos
+
+        inputSearch.focus(); // 👉 abre teclado
+        searchOpen = true;
     }
 
-    // Fecha campo de busca e restaura
-    function closeSearch() {
-        inputSearch.style.display = "none";
-        inputSearch.value = "";
-        if (arrowLeft) arrowLeft.style.display = "none";
-
-        // Restaura produtos e títulos
+    function applySearchAndCloseKeyboard() {
+        // aplica filtro
+        const filter = inputSearch.value.toLowerCase();
         produtos.forEach(produto => {
-            produto.style.display = produto.dataset.originalDisplay;
+            const nomeEl = produto.querySelector("h1");
+            const nome = nomeEl ? nomeEl.textContent.toLowerCase() : "";
+            produto.style.display = nome.includes(filter) ? produto.dataset.originalDisplay : "none";
         });
-        toggleCategoryTitles(false); // mostra títulos novamente
+
+        // fecha teclado
+        inputSearch.blur();
+        searchOpen = false;
     }
 
-    if (iconSearch) iconSearch.addEventListener("click", openSearch);
-    if (arrowLeft) arrowLeft.addEventListener("click", closeSearch);
+    if (iconSearch) {
+        iconSearch.addEventListener("click", () => {
+            if (!searchOpen) {
+                openSearch(); // primeiro clique → abre e foca
+            } else {
+                applySearchAndCloseKeyboard(); // segundo clique → aplica filtro e fecha teclado
+            }
+        });
+    }
 
-    if (inputSearch) {
-        inputSearch.addEventListener("input", () => {
-            const filter = inputSearch.value.toLowerCase();
+    if (arrowLeft) {
+        arrowLeft.addEventListener("click", () => {
+            inputSearch.style.display = "none";
+            inputSearch.value = "";
+            if (arrowLeft) arrowLeft.style.display = "none";
 
             produtos.forEach(produto => {
-                const nomeEl = produto.querySelector("h1");
-                const nome = nomeEl ? nomeEl.textContent.toLowerCase() : "";
-
-                if (nome.includes(filter)) {
-                    produto.style.display = produto.dataset.originalDisplay;
-                } else {
-                    produto.style.display = "none";
-                }
+                produto.style.display = produto.dataset.originalDisplay;
             });
+            toggleCategoryTitles(false); // mostra títulos novamente
+            searchOpen = false;
         });
     }
 });
