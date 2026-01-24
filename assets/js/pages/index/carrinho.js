@@ -65,7 +65,7 @@ function updateOptionStyles(){
 }
 
 // Configurar endereço da loja
-const STORE_ADDRESS = "*RETIRADA NA LOJA*"
+const STORE_ADDRESS = "*Rua marrocos 109*"
 storeAddress.textContent = STORE_ADDRESS;
 storeAddress.style.display = "none";
 
@@ -312,9 +312,9 @@ checkoutBtn.addEventListener("click", function(){
 
     const cartItems = cart.map((item) => {
     return (
-        ` ${item.name} Quatidade: (${item.quantity}) Preço R$${item.price} |`
+        ` ${item.name} Quatidade: (${item.quantity}) Preço R$${item.price}`
     )
-    }).join("")
+    }).join("\n")
 
     const phone = "41998924551"
     let fullMessage;
@@ -322,7 +322,7 @@ checkoutBtn.addEventListener("click", function(){
     if(selectedOption === "delivery"){
         fullMessage = `${cartItems}\nEndereço de Entrega: ${addressInput.value}\nTotal: ${cartTotal.textContent}`;
     } else {
-        fullMessage = `${cartItems}\n**RETIRADA**\nEndereço: ${STORE_ADDRESS}\nTotal: ${cartTotal.textContent}`;
+        fullMessage = `${cartItems}\n*RETIRADA*\nEndereço: ${STORE_ADDRESS}\nTotal: ${cartTotal.textContent}`;
     }
     
     const encodedMessage = encodeURIComponent(fullMessage);
