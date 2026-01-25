@@ -321,7 +321,6 @@ checkoutBtn.addEventListener("click", function(){
 
     const cartName = `Cliente: ${name || name1 || "Não informado"}`;
 
-
     const phone = "41998924551"
     let fullMessage;
     
