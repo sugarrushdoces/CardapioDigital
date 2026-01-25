@@ -312,20 +312,25 @@ checkoutBtn.addEventListener("click", function(){
 
     const cartItems = cart.map((item) => {
     return (
-        ` *${item.quantity}x* *${item.name}*
-        `
+        `\n*${item.quantity}x* *${item.name}*`
     )
     }).join("\n")
+
+    const name = document.getElementById("name")?.value.trim();
+    const name1 = document.getElementById("name1")?.value.trim();
+
+    const cartName = `Cliente: ${name || name1 || "Não informado"}`;
+
 
     const phone = "41998924551"
     let fullMessage;
     
     if(selectedOption === "delivery"){
-        fullMessage = `${cartItems}\nEndereço de Entrega: ${addressInput.value}\nTotal: ${cartTotal.textContent}`;
+        fullMessage = `Pedido via Whatsapp \n\n${cartName} \n${cartItems} \n\nValor\nTotal: ${cartTotal.textContent} \n\n*ENTREGA*\n\nEndereço: ${addressInput.value}`;
     } else {
-        fullMessage = `${cartItems}\n*RETIRADA*\nEndereço: ${STORE_ADDRESS}\nTotal: ${cartTotal.textContent}`;
+        fullMessage = `Pedido via Whatsapp \n\n${cartName} \n${cartItems} \n\nValor\nTotal: ${cartTotal.textContent} \n\n*RETIRADA*\n\nEndereço: ${STORE_ADDRESS}`;
     }
-    
+
     const encodedMessage = encodeURIComponent(fullMessage);
 
     window.open(`https://wa.me/${phone}?text=${encodedMessage}`, "_blank");
