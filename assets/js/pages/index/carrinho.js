@@ -312,7 +312,8 @@ checkoutBtn.addEventListener("click", function(){
 
     const cartItems = cart.map((item) => {
     return (
-        ` ${item.name} Quatidade: (${item.quantity}) Preço R$${item.price}`
+        ` *${item.quantity}x* *${item.name}*
+        `
     )
     }).join("\n")
 
