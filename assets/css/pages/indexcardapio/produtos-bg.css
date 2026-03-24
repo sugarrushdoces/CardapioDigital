@@ -6,6 +6,26 @@
     background-size: 470px;
 }
 
+.geleia-morango {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/supreme/geleia-morango.png");
+}
+
+.kit-kat {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/supreme/kit-kat.png");
+}
+
+.kinder-bueno {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/supreme/kinder-bueno.png");
+}
+
+.frutas-wey {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/coposaladadefrutas/frutas-wey.png");
+}
+
 .raffaellocommorango {
     background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
     url("../../../images/pages/index/moranlovers/Raffaello com morango.png");
