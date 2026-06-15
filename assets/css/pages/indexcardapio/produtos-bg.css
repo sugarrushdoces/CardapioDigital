@@ -21,6 +21,11 @@
     url("../../../images/pages/index/supreme/kinder-bueno.png");
 }
 
+.torta-de-limao {
+    background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
+    url("../../../images/pages/index/supreme/torta-de-limao.png");
+}
+
 .frutas-wey {
     background-image: linear-gradient(to left, rgba(245, 213, 166, 0.514), rgb(245, 213, 166)),
     url("../../../images/pages/index/coposaladadefrutas/frutas-wey.png");
