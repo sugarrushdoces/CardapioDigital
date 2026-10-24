@@ -1,3 +1,375 @@
-@import '../index/header.css';
-@import '../index/body.css';
-@import '../index/main.css';
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 90% 20%, #63c8cb44, transparent 45%), #ffdbaf;
+  color: #592a23;
+  font-family: Arial, sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+.wrap {
+  width: min(1180px, calc(100% - 48px));
+  margin: auto;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+  border-bottom: 2px solid #742f2633;
+}
+.brand {
+  font-size: 29px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+.brand small {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+.talk {
+  background: #fff2d8;
+  border: 1px solid #deb38a;
+  border-radius: 40px;
+  padding: 12px 20px;
+  font-size: 13px;
+}
+main {
+  padding-top: 60px;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  padding-bottom: 70px;
+}
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.eyebrow::before {
+  content: "●";
+  color: #208387;
+  margin-right: 9px;
+}
+h1 {
+  font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+  font-size: clamp(48px, 5.8vw, 78px);
+  line-height: 1.07;
+  letter-spacing: -3px;
+  margin: 24px 0;
+  color: #742f26;
+}
+h1 span {
+  text-shadow: 3px 3px #f7797d;
+  background: linear-gradient(
+    transparent 70%,
+    #ffce60 70%,
+    #ffce60 95%,
+    transparent 95%
+  );
+}
+.intro {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 400px;
+}
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 320px;
+  padding: 20px 26px;
+  background: #742f26;
+  color: #fff2d8;
+  border-radius: 40px;
+  box-shadow: 0 5px #f7797d;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 28px;
+}
+.cta:hover {
+  background: #58231c;
+  transform: translateY(-2px);
+}
+.note {
+  font-size: 11px;
+  margin-top: 18px;
+}
+.art {
+  position: relative;
+  padding: 22px 15px 35px;
+}
+.art > p {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 9px;
+}
+.picture {
+  padding: 13px;
+  background: #63c8cb;
+  border: 3px solid #742f26;
+  border-radius: 35px;
+  transform: rotate(3deg);
+  box-shadow: 12px 12px #f7797d;
+}
+.picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+}
+.seal {
+  position: absolute;
+  bottom: 0;
+  left: -15px;
+  width: 110px;
+  height: 110px;
+  background: #ffce60;
+  border: 5px solid #fff2d8;
+  outline: 2px solid #742f26;
+  border-radius: 50%;
+  display: grid;
+  align-content: center;
+  text-align: center;
+  transform: rotate(-12deg);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.spark {
+  position: absolute;
+  right: -10px;
+  top: 0;
+  font-size: 55px;
+  color: #742f26;
+  text-shadow: 3px 3px #ffce60;
+}
+.channels {
+  border-top: 2px solid #742f2633;
+  padding: 30px 0 50px;
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 25px;
+  letter-spacing: -1px;
+}
+.heading p {
+  font-size: 12px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.card {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 22px 17px;
+  border: 1px solid #742f2655;
+  border-radius: 18px;
+  box-shadow: 0 4px #742f2618;
+  min-height: 98px;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-4px);
+}
+.card:nth-child(1) {
+  background: #a2dfe0;
+}
+.card:nth-child(2) {
+  background: #ffdc84;
+}
+.card:nth-child(3) {
+  background: #ffb2ad;
+}
+.card:nth-child(4) {
+  background: #fff2d8;
+}
+.icon {
+  font-size: 27px;
+}
+.card strong {
+  font-size: 14px;
+}
+.card small {
+  display: block;
+  font-size: 10px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+.arrow {
+  margin-left: auto;
+}
+footer {
+  border-top: 2px solid #742f2633;
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer strong {
+  font-size: 22px;
+}
+footer p {
+  font-size: 11px;
+}
+dialog {
+  max-width: calc(100% - 40px);
+  width: 400px;
+  border: 2px solid #742f26;
+  border-radius: 24px;
+  background: #fff2d8;
+  color: #592a23;
+  padding: 28px;
+}
+dialog::backdrop {
+  background: #30131399;
+}
+dialog p {
+  line-height: 1.6;
+}
+button {
+  border: 0;
+  background: #742f26;
+  color: #fff2d8;
+  border-radius: 30px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font: inherit;
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #006b73;
+  outline-offset: 5px;
+}
+@media (max-width: 950px) {
+  .hero {
+    gap: 35px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .wrap {
+    width: calc(100% - 40px);
+  }
+  header {
+    padding: 23px 0;
+  }
+  .brand {
+    font-size: 24px;
+  }
+  .talk {
+    font-size: 11px;
+    padding: 10px 13px;
+  }
+  main {
+    padding-top: 27px;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-bottom: 40px;
+  }
+  .copy {
+    text-align: center;
+  }
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+  h1 {
+    font-size: 52px;
+    letter-spacing: -2px;
+    margin: 20px 0;
+  }
+  .intro {
+    font-size: 14px;
+    margin: auto;
+  }
+  .cta {
+    width: 100%;
+    max-width: 360px;
+    margin: 25px auto 0;
+  }
+  .note {
+    font-size: 10px;
+  }
+  .art {
+    width: min(350px, 95%);
+    margin: auto;
+    padding: 10px 15px 35px;
+  }
+  .picture {
+    padding: 10px;
+    border-radius: 28px;
+    box-shadow: 8px 8px #f7797d;
+  }
+  .picture img {
+    border-radius: 16px;
+  }
+  .seal {
+    width: 90px;
+    height: 90px;
+    left: -3px;
+    font-size: 12px;
+  }
+  .spark {
+    font-size: 42px;
+    right: -2px;
+  }
+  .heading {
+    display: block;
+    text-align: center;
+  }
+  .heading h2 {
+    margin-bottom: 10px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    min-height: 80px;
+    padding: 17px 20px;
+  }
+  .card small {
+    font-size: 11px;
+  }
+  .channels {
+    padding-bottom: 32px;
+  }
+  footer {
+    display: block;
+    text-align: center;
+  }
+  footer p {
+    line-height: 1.6;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

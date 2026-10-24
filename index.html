@@ -1,29 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/pages/index/index.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#ffdbaf">
     <title>Sugar Rush Doces</title>
+    <link rel="stylesheet" href="assets/css/pages/index/index.css">
 </head>
 
-    <header>
-        <div class="soon">
-        <img src="assets/images/pages/index/navbar-inicio/logo.png" alt="soon" class="img-soon">
-        </div>
-        <div class="img-bottom"></div>
-    </header>
-
 <body>
-    <main>
-        <div class="item-1"><a href="https://wa.me/41998924551" target="_blank">WHATSAPP</a></div>
-        <div class="item-2"><a href="https://catalogo.stone.com.br/sugarrushdoces">PEDIR AGORA</a></div>
-        <div class="item-1"><a href="https://docs.google.com/forms/d/e/1FAIpQLSc1Pa4NMKLnMzniKCIpYbViEhre2JguQuZ0SU31faYggRK1vg/viewform?usp=publish-editor">AGENDAMENTO</a></div>
-        <div class="item-3"><a href="instagram://user?username=sugar.rushdoces" 
-        onclick="setTimeout(function(){ window.location='https://www.instagram.com/sugar.rushdoces/'; }, 500);">
-        INSTRAGRAM</a></div>
-        <div><a href="https://www.youtube.com/@SugarRushDoces">YOUTUBE</a></div>
+    <header class="wrap"><a class="brand" href="#inicio">Sugar Rush<small>FEITO PARA ADOÇAR.</small></a><a class="talk"
+            data-link="whatsapp" href="https://wa.me/5541998924551" target="_blank" rel="noopener noreferrer">Vamos
+            conversar ↗</a></header>
+    <main class="wrap" id="inicio">
+        <section class="hero">
+            <div class="copy">
+                <p class="eyebrow">UMA PAUSA. MUITA DOÇURA.</p>
+                <h1>O sabor que conquista <br>na <span>primeira colherada.</span></h1>
+                <p class="intro">Uma explosão de doçura a cada mordida.<br>Escolha seu favorito e deixe o resto com a
+                    gente.</p><a class="cta" href="https://catalogo.stone.com.br/sugarrushdoces" data-link="pedir"
+                    target="_blank" rel="noopener noreferrer">Pedir Agora <span aria-hidden="true">↗</span></a>
+                <p class="note">Seu próximo momento doce começa aqui.</p>
+            </div>
+            <div class="art">
+                <p>DOÇURA QUE DÁ VONTADE DE REPETIR</p>
+                <div class="picture"><img src="/assets/navbar-inicio/logo.png" width="640"
+                        height="640" alt="Sugar Rush — Uma explosão de doçura a cada mordida!"></div><span class="seal"
+                    aria-hidden="true">Puro amor,<br><strong>Puro sabor.</strong></span><span class="spark"
+                    aria-hidden="true">✳</span>
+            </div>
+        </section>
+        <section class="channels">
+            <div class="heading">
+                <h2>Mais perto de você.</h2>
+                <p>Um doce encontro, em qualquer canal.</p>
+            </div>
+            <div class="grid"><a class="card" data-link="whatsapp" href="https://wa.me/5541998924551" target="_blank"
+                    rel="noopener noreferrer"><span class="icon" aria-hidden="true">↗</span>
+                    <div><strong>WhatsApp</strong><small>Converse com a gente</small></div><span class="arrow">↗</span>
+                </a><a class="card" data-link="agendamento"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSc1Pa4NMKLnMzniKCIpYbViEhre2JguQuZ0SU31faYggRK1vg/viewform?usp=publish-editor"
+                    target="_blank" rel="noopener noreferrer"><span class="icon" aria-hidden="true">▦</span>
+                    <div><strong>Agendamento</strong><small>Planeje um momento especial</small></div><span
+                        class="arrow">↗</span>
+                </a><a class="card" data-link="instagram" href="https://www.instagram.com/sugar.rushdoces/"
+                    target="_blank" rel="noopener noreferrer"><span class="icon" aria-hidden="true">◎</span>
+                    <div><strong>Instagram</strong><small>Uma dose de inspiração</small></div><span
+                        class="arrow">↗</span>
+                </a><a class="card" data-link="youtube" href="https://www.youtube.com/@SugarRushDoces" target="_blank"
+                    rel="noopener noreferrer"><span class="icon" aria-hidden="true">▷</span>
+                    <div><strong>YouTube</strong><small>Entre no nosso universo</small></div><span
+                        class="arrow">↗</span>
+                </a></div>
+        </section>
     </main>
-
+    <footer class="wrap"><strong>Sugar Rush</strong>
+        <p>Pequenos momentos. Grandes doses de felicidade.</p>
+    </footer>
+    <dialog id="aviso">
+        <h2>Em breve por aqui</h2>
+        <p>Este canal ainda está sendo preparado. Volte em breve!</p>
+        <form method="dialog"><button>Entendi</button></form>
+    </dialog>
+    <script src="assets/js/pages/index/index.js" defer></script>
 </body>
+
 </html>
