@@ -254,10 +254,6 @@ h1 em {
   transform: translate3d(0, var(--cup-y, 0px), 0) rotate(var(--cup-r, -7deg));
   z-index: 2;
 }
-.cup-tilt {
-  transform: rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
-  transition: transform 0.25s ease-out;
-}
 .cup-photo {
   width: 100%;
   height: 570px;
