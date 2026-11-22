@@ -1,0 +1,54 @@
+SUGAR RUSH | CARTÃO DIGITAL
+==========================
+
+ARQUIVOS
+- index.html: estrutura do site
+- style.css: identidade visual e responsividade
+- script.js: botões, links, cardápio, formulário, QR codes e compartilhamento
+- assets/: logo, ícone e QR codes REAIS em PNG (não gerados por IA)
+
+COMO ABRIR
+1. Extraia a pasta inteira do ZIP.
+2. Abra index.html no navegador.
+3. Ao publicar, envie toda a pasta, mantendo os arquivos em suas posições.
+
+LINKS CONFIGURADOS
+- Instagram: https://www.instagram.com/sugar.rushdoces/
+- Cardápio: https://catalogo.stone.com.br/sugarrushdoces
+- WhatsApp: https://wa.me/5541988223209
+  ATENÇÃO: Este é o número de atendimento mais recente informado para a Sugar Rush.
+
+COMO EDITAR
+1. Abra script.js com VS Code.
+2. Edite os campos CONFIG.phone, CONFIG.instagram e CONFIG.catalog.
+3. Para trocar o número ou outro link, também gere novamente os QR codes
+   correspondentes da pasta assets/, pois são imagens estáticas reais.
+4. Edite GROUPS no script.js para atualizar produtos, categorias e sabores.
+5. NÃO há preços inseridos. O atendimento confirma valores, rotas e disponibilidade.
+6. Edite CONFIG.publicSiteUrl após publicar, para o botão Compartilhar abrir
+   seu endereço público definitivo (antes disso usa o catálogo como fallback
+   quando o arquivo é aberto localmente).
+7. Para substituir a logo, coloque sua imagem no caminho assets/logo-sugar-rush.jpg.
+8. Para a imagem aparecer na prévia do WhatsApp, configure og:image com URL
+   pública absoluta do arquivo, depois que o site estiver hospedado.
+
+PUBLICAR NO GITHUB PAGES
+- Suba index.html, style.css, script.js e assets/ no mesmo repositório.
+- Em Settings > Pages, configure a origem do branch da página.
+- Após publicar, substitua CONFIG.publicSiteUrl pela URL correta.
+
+FUNCIONALIDADES
+- Cartão digital totalmente responsivo
+- Link de WhatsApp com mensagem inicial
+- Cardápio externo real da Sugar Rush
+- Link de Instagram
+- Montagem de pedido e envio pelo WhatsApp
+- Modal para consultar entrega/rotas, sem prometer disponibilidade
+- QR codes reais para WhatsApp, Instagram e catálogo
+- Compartilhamento via Web Share (quando disponível) ou copiar link
+- Download de contato .VCF
+- Identidade visual baseada na logo fornecida pelo usuário
+
+OBSERVAÇÃO
+O site não processa pagamento, não confirma pedidos automaticamente e não
+possui backend. Use o canal de atendimento para confirmar os detalhes.
