@@ -38,6 +38,7 @@ function setAnchor(id, url) {
 function setupLinks() {
   setAnchor('whatsappMain', whatsappUrl(messageRequest));
   setAnchor('dockWhatsapp', whatsappUrl(messageRequest));
+  setAnchor('dockInstagram', CONFIG.instagram);
   setAnchor('specialOrders', whatsappUrl(messageSpecial));
   setAnchor('deliveryWhatsapp', whatsappUrl(messageDelivery));
   setAnchor('instagramMain', CONFIG.instagram);

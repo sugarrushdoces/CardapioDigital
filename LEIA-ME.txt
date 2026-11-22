@@ -52,3 +52,9 @@ FUNCIONALIDADES
 OBSERVAÇÃO
 O site não processa pagamento, não confirma pedidos automaticamente e não
 possui backend. Use o canal de atendimento para confirmar os detalhes.
+
+ATUALIZAÇÃO — MENU FIXO NO TOPO
+- Em telas de celular, a barra antes fixada no rodapé foi movida para o topo.
+- Agora inclui Fazer pedido (WhatsApp), Sabores (atalho interno) e Instagram.
+- O link do Instagram na barra é atualizado por CONFIG.instagram em script.js.
+- O conteúdo da página recebe espaço superior e Sabores compensa a altura da barra.

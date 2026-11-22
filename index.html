@@ -110,7 +110,11 @@
     </div>
   </div>
 
-  <div class="mobile-dock" aria-label="Ações rápidas"><a id="dockWhatsapp" href="https://wa.me/5541998924551" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-whatsapp"/></svg> Fazer pedido</a><a href="#sabores" class="dock-secondary"><svg class="icon"><use href="#i-menu"/></svg> Sabores</a></div>
+  <nav class="mobile-dock" aria-label="Acesso rápido fixo">
+    <a id="dockWhatsapp" href="https://wa.me/5541998924551" target="_blank" rel="noopener noreferrer" aria-label="Fazer pedido pelo WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg><span>Fazer pedido</span></a>
+    <a href="#sabores" class="dock-secondary"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span>Sabores</span></a>
+    <a id="dockInstagram" href="https://www.instagram.com/sugar.rushdoces/" class="dock-instagram" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg><span>Instagram</span></a>
+  </nav>
 
   <dialog class="dialog" id="qrDialog" aria-labelledby="qrTitle"><div class="dialog-panel"><div class="dialog-heading"><div><span class="section-kicker">COMPARTILHE A DOÇURA</span><h2 id="qrTitle">Nossos QR Codes</h2></div><button type="button" class="dialog-close" data-close="qrDialog" aria-label="Fechar"><svg class="icon"><use href="#i-x"/></svg></button></div><p>Escolha para onde deseja ir e aponte a câmera do celular.</p><div class="qr-tabs" role="group" aria-label="Destino do QR Code"><button class="qr-tab is-active" type="button" data-qr="whatsapp" aria-pressed="true">WhatsApp</button><button class="qr-tab" type="button" data-qr="instagram" aria-pressed="false">Instagram</button><button class="qr-tab" type="button" data-qr="cardapio" aria-pressed="false">Cardápio</button></div><div class="qr-frame"><img id="qrImage" src="assets/qr-whatsapp.png" width="300" height="300" alt="QR Code para conversar com a Sugar Rush no WhatsApp"><span id="qrLabel">Fale com a Sugar Rush</span></div><a class="dialog-link" id="qrDirectLink" href="https://wa.me/5541998924551" target="_blank" rel="noopener noreferrer">Abrir este destino <svg class="icon"><use href="#i-arrow"/></svg></a></div></dialog>
 
